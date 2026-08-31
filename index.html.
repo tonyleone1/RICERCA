@@ -1,24 +1,25 @@
-HTML
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mio Motore di Ricerca</title>
   <style>
-    body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f8f9fa; }
-    .search-box { text-align: center; }
-    h1 { color: #202124; margin-bottom: 24px; font-size: 32px; }
-    input[type="text"] { width: 450px; padding: 12px 20px; font-size: 16px; border: 1px solid #dfe1e5; border-radius: 24px; outline: none; }
-    input[type="text"]:focus { box-shadow: 0 1px 6px rgba(32,33,36,.28); border-color: rgba(223,225,229,0); }
-    button { padding: 12px 24px; font-size: 15px; margin-left: 8px; border: none; background-color: #1a73e8; color: white; border-radius: 24px; cursor: pointer; }
+    * { box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background-color: #f8f9fa; }
+    .search-container { text-align: center; width: 90%; max-width: 600px; padding: 20px; }
+    h1 { color: #202124; margin-bottom: 24px; font-size: 36px; }
+    .search-form { display: flex; gap: 10px; justify-content: center; }
+    input[type="text"] { flex: 1; padding: 14px 20px; font-size: 16px; border: 1px solid #dfe1e5; border-radius: 24px; outline: none; }
+    input[type="text"]:focus { box-shadow: 0 1px 6px rgba(32,33,36,.28); border-color: transparent; }
+    button { padding: 14px 24px; font-size: 16px; border: none; background-color: #1a73e8; color: white; border-radius: 24px; cursor: pointer; white-space: nowrap; }
     button:hover { background-color: #1557b0; }
   </style>
 </head>
 <body>
-  <div class="search-box">
+  <div class="search-container">
     <h1>Mio Motore di Ricerca</h1>
-    <!-- Sostituisci "https://www.google.com/search" con l'URL fornito dal tuo partner di monetizzazione -->
-    <form action="https://www.google.com/search" method="get">
+    <form class="search-form" action="[https://www.google.com/search](https://www.google.com/search)" method="get">
       <input type="text" name="q" placeholder="Cerca su internet..." required>
       <button type="submit">Cerca</button>
     </form>
